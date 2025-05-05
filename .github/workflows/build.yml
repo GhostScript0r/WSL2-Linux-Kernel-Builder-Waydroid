@@ -11,15 +11,15 @@ jobs:
   build:
     strategy:
       matrix:
-        branch: ['linux-msft-wsl-5.4.y']
+        branch: ['linux-msft-wsl-5.15.y']
     runs-on: ubuntu-latest
     steps:
 
     - name: Checkout WSL2 Kernel Builder
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Checkout WSL2 Kernel Repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: 'microsoft/WSL2-Linux-Kernel'
         ref: ${{ matrix.branch }}
